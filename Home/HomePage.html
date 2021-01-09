@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | HackinvaH</title>
+    <link rel="stylesheet" href="HomePage.css">
+</head>
+<body>
+    <nav>
+        <a href="http://localhost/hackathon/Home/HomePage.html" class="bar">Home</a>
+        <a href="" class="bar">About Us</a>
+        <a href="http://localhost/hackathon/loginform.php" class="bar" id="bar2">Log in</a>
+        <a href="http://localhost/hackathon/signup.php" class="bar">Sign up</a>
+    </nav>
+    <br>
+    <div class="frontpage1stpart">
+        <div class="img-slider">
+                <div class="slide active">
+                  <img src="Image slider/1.jpg" alt="">
+                  <div class="info">
+                    <h2><i>Bhoota Figures from Mangalorev</i></h2>
+                  </div>
+                </div>
+                <div class="slide">
+                  <img src="Image slider/2.jpg" alt="">
+                  <div class="info">
+                    <h2><i>Nimmalakunta Leather Pupprtry Craft</i></h2>
+                  </div>
+                </div>
+                <div class="slide">
+                  <img src="Image slider/3.jpg" alt="">
+                  <div class="info">
+                    <h2><i> print – The classic print</i></h2>
+                  </div>
+                </div>
+                <div class="slide">
+                  <img src="Image slider/4.jpg" alt="">
+                  <div class="info">
+                    <h2><i>The Bell Metal Town Of Kerala</i></h2>
+                  </div>
+                </div>
+                <div class="slide">
+                  <img src="Image slider/5.jpg" alt="">
+                  <div class="info">
+                    <h2><i>Thanjavur Paintings</i></h2>
+                  </div>
+                </div>
+                <br><br><br>
+                <div class="navigation">
+                  <div class="btn active"></div>
+                  <div class="btn"></div>
+                  <div class="btn"></div>
+                  <div class="btn"></div>
+                  <div class="btn"></div>
+                </div>
+              </div>
+            
+              <script type="text/javascript">
+              var slides = document.querySelectorAll('.slide');
+              var btns = document.querySelectorAll('.btn');
+              let currentSlide = 1;
+          
+              // Javascript for image slider manual navigation
+              var manualNav = function(manual){
+                slides.forEach((slide) => {
+                  slide.classList.remove('active');
+          
+                  btns.forEach((btn) => {
+                    btn.classList.remove('active');
+                  });
+                });
+          
+                slides[manual].classList.add('active');
+                btns[manual].classList.add('active');
+              }
+          
+              btns.forEach((btn, i) => {
+                btn.addEventListener("click", () => {
+                  manualNav(i);
+                  currentSlide = i;
+                });
+              });
+          
+              // Javascript for image slider autoplay navigation
+              var repeat = function(activeClass){
+                let active = document.getElementsByClassName('active');
+                let i = 1;
+          
+                var repeater = () => {
+                  setTimeout(function(){
+                    [...active].forEach((activeSlide) => {
+                      activeSlide.classList.remove('active');
+                    });
+          
+                  slides[i].classList.add('active');
+                  btns[i].classList.add('active');
+                  i++;
+          
+                  if(slides.length == i){
+                    i = 0;
+                  }
+                  if(i >= slides.length){
+                    return;
+                  }
+                  repeater();
+                }, 10000);
+                }
+                repeater();
+              }
+              repeat();
+              </script>
+</div>
+
+
+
+
+
+<div class="frontpage2ndpart">
+
+    <div class="box1">
+        <div class="content">
+            <em style="position: relative; color: tomato; font-size: 30px;left: 220px  ;top: 155px"><u>The Bell Metal Town Of Kerala</u></em>
+            <p style="color: white; text-align: justify; width: 65%; position: relative; left: 40px; top: 185px;font-size: 20px;">Mannar is traditionally very famous for metal handicrafts producing utensils, lamps, 
+                    bells etc. made out of bell metal, brass, bronze and panchdhaatu even. Alloys likebronze, brass etc were used in ancient times also.
+            </p>
+            <img id="one" src="Images/photo1.jpg" alt="image1">
+            <input type="submit" value="Buy Now" id="buy1">
+            <input type="submit" value="Know More" id="more1" onclick="myF1()">
+    
+        </div>
+    </div>
+    <br>
+  
+    <div class="box2">
+        <div class="content">
+            <em style="position: relative; padding-left: 550px; color: tomato; top: 130px ; word-spacing: 2px ;font-size: 30px"><u>Ajrak print – The classic print</u></em>
+            <p style="position: relative; color: white; text-align:justify; width: 60%; padding-left: 400px; top: 145px;font-size: 20px;">Ajrak is a block- printed textile that is resist-dyed using natural dyes.Ajrak is said to signify universe.Think moonless, think midnight, think darkness.. the dark sprangled sky against a stark blue black background. This is what ajrakh meaning blue in the arabic,is likened to.
+                </p>
+            <img id="two" src="Images/photo2.jpg" alt="image2">
+            <input class="two" type="submit" value="Buy Now" id="buy2">
+            <input class="two" type="submit" value="Know More" id="more2" onclick="myF2()">
+    
+        </div>
+    </div>
+
+
+    <div class="box3">
+            <div class="content">
+                <em style="position: relative; color: tomato; font-size: 30px;left: 220px  ;top: 110px"><u>Bhoota Figures from Mangalore</u></em>
+                <p style="color: white; text-align: justify; width: 65%; position: relative; left: 40px; top: 135px;font-size: 20px;">Bhoota Figures are taken or based on from the olden traditions or it is on the religious beliefs that led the people of the villages. It is a traditional art that is transferred only from the forefathers to the next generation, seen in the Basrur region of Udupi in Karnataka.
+                    </p>
+                <img id="three" src="Images/photo3.jpg" alt="image3">
+                <input type="submit" value="Buy Now" id="buy3">
+                <input type="submit" value="Know More" id="more3" onclick="myF3()">
+        
+            </div>
+        </div>
+        <br>
+  
+        <div class="box4">
+            <div class="content">
+                <em style="position: relative; padding-left: 560px; color: tomato; top: 120px ; word-spacing: 2px ;font-size: 30px"><u>Thanjavur Paintings</u></em>
+                <p style="position: relative; color: white; text-align:justify; width: 70%; padding-left: 300px; top: 137px;font-size: 20px;">Thanjavur style of painting is one of the most popular and classical among all the South Indian painting forms. It is a native art of Thanjavur, Tamil Nadu. The inspiration of this great southern art form traces back to around 1600 AD. Their dense artistic work along with their vibrant color and rich surface make these Thanjavur paintings distinguishable from the other forms of Indian paintings. </p>
+                <img id="four" src="Images/photo4.jpg" alt="image4">
+                <input class="two" type="submit" value="Buy Now" id="buy4">
+                <input class="two" type="submit" value="Know More" id="more4" onclick="myF4()">
+        
+            </div>
+        </div>
+
+
+        <div class="box5">
+                <div class="content">
+                    <em style="position: relative; color: tomato; font-size: 30px;left: 160px  ;top: 100px"><u>Nimmalakunta Leather Pupprtry Craft</u></em>
+                    <p style="color: white; text-align: justify; width: 65%; position: relative; left: 40px; top: 135px;font-size: 20px;">The Art of Leather puppetry craft is an ancient form of folk Arts in Andhra Pradesh, India. It was an Art of Livelihood in Anantapur district of Andhra Pradesh, while Nimmalakunta, a remote village in Dharmavaram Mandal is famous for it.
+                        </p>
+                    <img id="five" src="Images/photo5.jpg" alt="image5">
+                    <input type="submit" value="Buy Now" id="buy5">
+                    <input type="submit" value="Know More" id="more5" onclick="myF5()">
+            
+                </div>
+            </div>
+            <br>
+           
+            <div class="box6">
+                <div class="content">
+                    <em style="position: relative; padding-left: 730px; color: tomato; top: 100px ; word-spacing: 2px ;font-size: 30px"><u>Amadubi</u></em>
+                    5<p style="position: relative; color: white; text-align:justify; width: 50%; padding-left: 470px; top: 137px;font-size: 20px;">Madubi is a village known for its skilled chitrakars and Paitkar paintings. Since centuries, Amadubi is home to many artists and pictorial storytellers.</p>
+                    <img id="six" src="Images/photo6.jpg" alt="image6">
+                    <input class="two" type="submit" value="Buy Now" id="buy6">
+                    <input class="two" type="submit" value="Know More" id="more6" onclick="myF6()">
+            
+                </div>
+            </div>
+            <script>
+              function myF1() {
+                location.replace("http://localhost/hackathon/CP1/page1.html")
+              }
+              function myF2() {
+                location.replace("http://localhost/hackathon/CP2/page2.html")
+              }
+              function myF3() {
+                location.replace("http://localhost/hackathon/CP3/page3.html")
+              }
+              function myF4() {
+                location.replace("http://localhost/hackathon/CP4/page4.html")
+              }
+              function myF5() {
+                location.replace("http://localhost/hackathon/CP5/page5.html")
+              }
+              function myF6() {
+                location.replace("http://localhost/hackathon/CP6/page6.html")
+              }
+              </script>          
+</div>
+</body>
+</html>
