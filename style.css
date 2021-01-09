@@ -1,0 +1,108 @@
+body{
+    background: rgb(3, 3, 20);
+}
+.box{
+    position: relative;
+    top: 30px;
+    left: 13%;
+    width: 1100px;
+    height: 470px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: rgb(3, 3, 20);
+}
+.box:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: white;
+    z-index: -1;
+}
+.box:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: white;
+    z-index: -2;
+    filter: blur(40px);
+}
+.box:before,.box:after{
+    background: linear-gradient(200deg, rgb(245, 242, 51),rgb(3,3,20), #fd0d0d);
+}
+p#name,p#query{
+    color: azure;
+    position: relative;
+    left: 30%;
+    font-size: 30px;
+}
+
+textarea#text{
+    position: relative;
+    left: 30%;
+    font-size: 20px;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    resize: none;
+    border-bottom: 2px solid rgb(45, 247, 236);
+    background-color: transparent;
+    color: white;
+    
+}
+input#name{
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(45, 247, 236);
+    background-color: transparent;
+    color: white;
+}
+input.submit{
+    position: relative;
+    left: 30%;
+    top: 40%;
+    background-color: rgb(32, 143, 187);
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+input.submit:hover{
+    background: rgb(20, 165, 68);
+    box-shadow: 0 0 10px #00fa36cc,0 0 40px #00fa36cc,0 0 80px #00fa36cc;
+}
+h1{
+    color: thistle;
+    text-align: center;
+    position: relative;
+    padding-top: 2%;
+    font-size: 50px;
+}
+input.home{
+    position: relative;
+    top: 60%;
+    left: -15%;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgb(32, 143, 187);
+}
+input.home:hover{
+    background: rgb(20, 165, 68);
+    box-shadow: 0 0 10px #00fa36cc,0 0 40px #00fa36cc,0 0 80px #00fa36cc;
+}

@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    background:#c55f5f;
+}
+.box{
+    width: 300px;
+    padding : 40px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: #070707;
+    text-align: center;
+    font-weight: 500;
+
+}
+.box h1{
+    color: rgb(247, 244, 244);
+    text-transform: uppercase;
+
+}
+
+
+
+
+.box input[type="submit"]{
+    border: 0;
+    background: 0;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #1900fa;
+    padding: 10px 30px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover{
+    background: #2500facc;
+    box-shadow: 0 0 10px #00ddfacc,0 0 40px #00ddfacc,0 0 80px #00ddfacc;
+}
